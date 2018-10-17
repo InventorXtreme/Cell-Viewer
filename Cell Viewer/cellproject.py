@@ -26,10 +26,10 @@ def nucle():
     messagebox.showinfo("Nucleus", "Holds DNA, acts as brain of cell.")
 def vacole():
     #p, a
-    messagebox.showinfo("Vacule", "Stores minerals and water.")
+    messagebox.showinfo("Vacule", "The vacule stores minerals and water.")
 def nuceo():
     #p, a
-    messagebox.showinfo("Nucleolus", "Makes ribosomes.")
+    messagebox.showinfo("Nucleolus", "Makes ribosomes")
 def nemem():
     #p, a
     messagebox.showinfo("Nuclear Membrane", "Keeps DNA in and other stuff out.")
@@ -109,7 +109,7 @@ t=ttk.Button(root,text="help")
 def ima():
     messagebox.showinfo("Image credits", "Icon: https://healthmatters.io/media/public/healthmatters/biomarker_category_images/cell.png\nMain Image: https://qph.fs.quoracdn.net/main-qimg-067bc9c9ce364aa1fd3f0f9308ac39a3")
 def aboutc():
-    messagebox.showinfo("About","Whirlwind Cell Viewer V 1.2.1\n\n \nAlex Moening\nWhirlwind")
+    messagebox.showinfo("About","Whirlwind Cell Viewer V 1.2.2\n\n \nAlex Moening\nWhirlwind")
 menubar.add_cascade(label="About", menu=about)
 about.add_command(label="About",command=aboutc)
 about.add_command(label="Images", command=ima)
@@ -119,9 +119,12 @@ tst.image = cellpic
 tst.pack()
 s=ttk.Style()
 try:
-    s.theme_use('vista')
+    themeu = "vista"
+    s.theme_use(themeu)
 except:
-    print("error diverted")
+    print("Whrilwind Recovery System\n"
+          "We have fixed a ttk theme error"
+          "Error: Theme "+ themeu +" not found")
     
 root.resizable(0,0)
 #root.overrideredirect(1) # will remove the top badge of window
